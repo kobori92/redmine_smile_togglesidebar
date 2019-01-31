@@ -88,10 +88,9 @@ module Smile
             # 3/ New method
             def image_toggle_sidebar(p_show_sidebar)
               if ! defined?(@@image_toggle_sidebar_true)
-                @@image_toggle_sidebar_true = '/plugin_assets/redmine_smile_togglesidebar/images/'
-                @@image_toggle_sidebar_false = @@image_toggle_sidebar_true
-                @@image_toggle_sidebar_true += 'maximize.png'
-                @@image_toggle_sidebar_false += 'minimize.png'
+		toggle_button_image_assets = '/plugin_assets/redmine_smile_togglesidebar/images/'
+                @@image_toggle_sidebar_true = asset_path(toggle_button_image_assets + 'maximize.png')
+                @@image_toggle_sidebar_false = asset_path(toggle_button_image_assets + 'minimize.png')
               end
 
               if p_show_sidebar
